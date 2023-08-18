@@ -29,7 +29,8 @@
  * @return {number}
  */
 var minSubArrayLen = function (target, nums) {
-  let left = (sum = 0);
+  let left = 0;
+  let sum = 0;
   let minLength = Infinity;
   for (let right = 0; right < nums.length; right++) {
     sum += nums[right];
