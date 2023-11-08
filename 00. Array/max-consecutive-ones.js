@@ -34,3 +34,22 @@ var findMaxConsecutiveOnes = function (nums) {
   }
   return maxCount;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findMaxConsecutiveOnes = function (nums) {
+  let maxCount = 0;
+  let oneCounter = 0;
+  for (let i = 0; i < nums.length; i++) {
+    let item = nums[i];
+    if (item) {
+      oneCounter++;
+      maxCount = Math.max(maxCount, oneCounter);
+    } else {
+      oneCounter = 0;
+    }
+  }
+  return maxCount;
+};
