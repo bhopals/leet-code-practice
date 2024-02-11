@@ -54,3 +54,14 @@ var findNumbers = function (nums) {
   }, 0);
   return count;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findNumbers = function (nums) {
+  let count = nums.reduce((acc, num) => {
+    return String(num).length % 2 === 0 ? acc + 1 : acc;
+  }, 0);
+  return count;
+};
