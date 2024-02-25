@@ -59,3 +59,19 @@ var removeDuplicates = function (nums) {
   }
   return nums.length;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function (nums) {
+  let i = 0;
+
+  for (let j = 1; j <= nums.length; j++) {
+    if (nums[j] !== nums[i]) {
+      i += 1;
+      nums[i] = nums[j];
+    }
+  }
+  return i;
+};
