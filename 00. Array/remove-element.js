@@ -67,3 +67,44 @@ var removeElement = function (nums, val) {
     }
   }
 };
+
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function (nums, val) {
+  let len = nums.length;
+
+  let count = 0;
+  while (count < len) {
+    if (nums[count] === val) {
+      nums.splice(count, 1);
+    } else {
+      count++;
+    }
+  }
+};
+
+var removeElement = function (nums, val) {
+  for (let i = 0; i < nums.length; ) {
+    if (nums[i] === val) {
+      nums.splice(i, 1);
+    } else {
+      i++;
+    }
+  }
+  return nums.length;
+};
+
+var removeElement = function (nums, val) {
+  // iterate thru and check that nums[i] !== val
+  let m = 0;
+  for (i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[m] = nums[i];
+      m++;
+    }
+  }
+  return m;
+};
