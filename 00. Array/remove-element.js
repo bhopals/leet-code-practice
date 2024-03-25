@@ -105,6 +105,7 @@ var removeElement = function (nums, val) {
       nums[m] = nums[i];
       m++;
     }
+    //console.log(m);
   }
   return m;
 };
