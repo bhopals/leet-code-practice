@@ -22,7 +22,7 @@
 // 1 <= nums.length <= 104
 // -231 <= nums[i] <= 231 - 1
 
-// Follow up: Could you minimize the total number of operations done?
+//  Follow up: Could you minimize the total number of operations done?
 
 var moveZeroes = function (nums) {
   let position = 0;
