@@ -1,4 +1,4 @@
-// 2215. Find the Difference of Two Arrays
+// 1207. Unique Number of Occurrences
 
 // Given an array of integers arr, return true if the number of occurrences of each value in the array is unique or false otherwise.
 
@@ -40,3 +40,28 @@ var uniqueOccurrences = function (arr) {
   }
   return set.size === mapLength;
 };
+
+function uniqueOccurrences(arr) {
+  const countMap = {};
+
+  // Count occurrences of each element
+  arr.forEach((num) => {
+    countMap[num] = (countMap[num] || 0) + 1;
+  });
+
+  const occurrencesSet = new Set();
+
+  // Check for unique occurrences
+  for (const count of Object.values(countMap)) {
+    if (occurrencesSet.has(count)) {
+      return false; // If duplicate count found, return false
+    }
+    occurrencesSet.add(count);
+  }
+
+  return true; // If all counts are unique, return true
+}
+
+// Example usage:
+const arr = [1, 2, 2, 1, 1, 3];
+console.log(uniqueOccurrences(arr)); // Output: true
