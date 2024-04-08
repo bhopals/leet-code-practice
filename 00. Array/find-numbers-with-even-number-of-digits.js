@@ -39,3 +39,18 @@ var findNumbers = function (nums) {
   }
   return eventCount;
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findNumbers = function (nums) {
+  let count = nums.reduce((acc, num) => {
+    if (String(num).length % 2 === 0) {
+      return acc + 1;
+    } else {
+      return acc;
+    }
+  }, 0);
+  return count;
+};
