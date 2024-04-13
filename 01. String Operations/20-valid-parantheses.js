@@ -55,7 +55,7 @@ function isValid(s) {
 
   for (let char of s) {
     if (char in pairs) {
-      stack.push(char); // Push opening parentheses onto the stack
+      stack.push(char); // Push opening parentheses onto the stack and ...
     } else {
       // If it's a closing parenthesis, check if it matches the top of the stack
       if (stack.length === 0 || pairs[stack.pop()] !== char) {
