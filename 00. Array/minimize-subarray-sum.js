@@ -39,7 +39,7 @@ var minSubArrayLen = function (target, nums) {
       sum -= nums[left];
       left++;
     }
-    //console.log(`left:${left}, right:${right}, sum:${sum}`);
+    // console.log(`left:${left}, right:${right}, sum:${sum}`);
   }
   return minLength === Infinity ? 0 : minLength;
 };
